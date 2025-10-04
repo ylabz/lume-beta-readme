@@ -26,7 +26,6 @@ Welcome to LumeGallery, your comprehensive platform for creating and deploying N
 
 1. **Connect Your Wallet**: Click "Connect Wallet" and authorize the connection
 2. **Verify Access**: Ensure you own a Lume NFT for platform access
-3. **Choose Network**: Select your preferred blockchain network
 
 ---
 
