@@ -61,12 +61,12 @@ Welcome to LumeGallery, your comprehensive platform for creating and deploying N
 4. Configure basic collection details:
    - **Collection Name**: Your project's display name
    - **Token Name**: Individual token naming (e.g., "MyAwesomeNFT #1")
-   - **Token Symbol**: Short identifier (max 10 characters)
+   - **Token Symbol**: Short identifier (max 5 characters)
    - **Description**: Detailed project description
    - **Total Supply**: Number of NFTs to generate
    - **Mint Price**: Cost per mint (in network currency)
    - **Max Per Wallet**: Purchase limit per address
-   - **Royalties**: Creator royalties percentage (standard: 5%)
+   - **Royalties**: Creator royalties percentage
 
 ### Step 2: Trait Configuration
 
@@ -78,29 +78,25 @@ The trait system is the core of generative collections:
 - **Layer Order**: Drag and drop to reorder layers (bottom layers render first)
 - **Layer Naming**: Use descriptive names (e.g., "Background", "Eyes", "Accessories")
 
-#### Trait Upload Process
+#### Trait Upload Process Prior to Contract Deploment.
 
 1. **Add Layer**: Click "Add Layer" to create a new trait category
 2. **Upload Assets**:
    - Supported formats: SVG, PNG, GIF
-   - Recommended size: 1000x1000px for optimal quality
-   - File size limit: Check current limits in upload interface
+   - Recommended size: native pixel art size ifx1000px for optimal quality
+   - File size limit: The maximum file size for each trait is 2 KB - you can have up to 15 layers and each layer can have up to 100 KB worth of traits.
 3. **Set Rarities**: Each trait must have a rarity count that adds up to your total supply
 4. **Trait Naming**: Use clear, descriptive names for each variation
 
-#### Rarity System
+#### Trait Upload Process After Contract Deploment.
+1. You will be directed to the contract setting page where you will need to complete a transaction for every layer of your project to be uploaded to the contract.
+2. This must be done prior to any tokens being minted.
 
-- **Rarity Count**: Number of NFTs that will have this trait
-- **Total Validation**: All trait rarities in a layer must equal your total supply
-- **Distribution**: Lower rarity counts = rarer traits
-- **Example**: For 1000 supply:
-  - Rare trait: 10 count (1% rarity)
-  - Common trait: 500 count (50% rarity)
 
 ### Step 3: Preview and Validation
 
 1. **Generate Preview**: Use the preview system to see your collection
-2. **Check Duplicates**: The system will highlight any duplicate combinations
+2. **Check Duplicates**: The preview page will warn you of any duplicates and how many.
 3. **Trait Filtering**: Use the sidebar to filter by specific traits
 4. **Rarity Verification**: Ensure your rarity distribution matches expectations
 
@@ -224,30 +220,11 @@ function draw() {
 
 ---
 
-## Best Practices
-
-### Generative Collections
-
-- **File Optimization**: Compress images without losing quality
-- **Consistent Art Style**: Maintain visual consistency across traits
-- **Logical Rarity**: Design rarity distribution strategically
-- **Duplicate Prevention**: Review trait combinations for duplicates
-- **Metadata Planning**: Plan your trait names and descriptions
-
-### Deterministic Collections
-
-- **Code Efficiency**: Optimize for rendering speed
-- **Variety Testing**: Test with multiple seeds for output variety
-- **Error Handling**: Include proper error handling in your code
-- **Documentation**: Comment your code for future reference
-- **Performance**: Keep computational complexity reasonable
-
 ### General Guidelines
 
 - **Backup Your Work**: Save projects regularly
 - **Test Thoroughly**: Always test on testnet first
-- **Community Standards**: Follow platform and community guidelines
-- **Gas Optimization**: Consider gas costs for users
+- Report any bug or feature requests here: https://forms.gle/W8V5YjG7QFZsHMNi7
 
 ---
 
@@ -261,7 +238,7 @@ function draw() {
 **Solution**: Ensure each layer's rarity counts sum to your total supply
 
 **Problem**: Duplicate NFTs in preview
-**Solution**: Adjust trait combinations or reduce total supply
+**Solution**: Adjust trait weighting across all layers, reduce total supply, include more traits.
 
 **Problem**: Upload failures
 **Solution**: Check file format, size, and internet connection
@@ -300,7 +277,7 @@ function draw() {
 - **Dashboard**: Overview of your projects and activity
 - **Create Project**: Start new collection creation
 - **My Projects**: Manage existing projects
-- **Preview**: Test and validate your collections
+- **Preview**: Test and validate and deploy your collection from this page.
 
 ### Supported Networks
 
@@ -309,15 +286,7 @@ function draw() {
 - **Monad**: Parallel execution blockchain
 - **Base**: Coinbase's Layer 2 solution
 
-### Security Features
-
-- **Wallet Integration**: Secure Web3 wallet connections
-- **Access Control**: Lume NFT ownership verification
-- **Code Sandboxing**: Safe execution environment for deterministic code
-- **Transaction Security**: Standard Web3 security practices
 
 ---
-
-This guide provides a comprehensive overview of creating NFT collections on LumeGallery. For specific technical details or advanced features, refer to the platform's technical documentation or contact support.
 
 Happy creating! 🎨
