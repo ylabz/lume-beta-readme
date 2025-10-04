@@ -38,7 +38,7 @@ Welcome to LumeGallery, your comprehensive platform for creating and deploying N
 - **Technology**: Layered trait system with rarity weights
 - **Art Format**: SVG, PNG, or GIF files
 - **Deployment**: DIY deployment with full control
-- **Randomization**: Based on collection seed and trait probabilities
+- **Randomization**: Based on collection seed and keccak hashing along with trait weights to create a deterministic output,
 
 ### Deterministic Collections
 
